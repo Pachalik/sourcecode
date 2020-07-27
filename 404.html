@@ -16,7 +16,31 @@
             <p>La page que vous cherchez n'existe pas</p>
             <a href="main.html">Retour à l'accueil</a>
     </div>
+<style>
+    body.error {
+  text-align: center;
+}
+body.error .errorcontent h1 span {
+  margin-bottom: 50px;
+  font-size: 100px;
+  animation: error 2s linear infinite;
+}
+body.error .errorcontent {
+  margin-top: 50vh;
+  transform: translateY(-50%) translateX(-50%);
+  position: fixed;
+  left: 50%;
+}
+@keyframes error {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
 
+</style>
 
 <script src="js/particles.js"></script>
 <script src="js/app.js"></script>

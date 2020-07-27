@@ -30,29 +30,6 @@ a:hover {
 
 
 
-/* 404 */
-body.error {
-  text-align: center;
-}
-body.error .errorcontent h1 span {
-  margin-bottom: 50px;
-  font-size: 100px;
-  animation: error 2s linear infinite;
-}
-body.error .errorcontent {
-  margin-top: 50vh;
-  transform: translateY(-50%) translateX(-50%);
-  position: fixed;
-  left: 50%;
-}
-@keyframes error {
-  0% {
-    transform: translateY(-100px);
-  }
-  100% {
-    transform: translateY(100px);
-  }
-}
 
 /* Chargement */
 /* Fusée */
