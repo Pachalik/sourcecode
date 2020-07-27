@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/pace.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <title>Chargement...</title>
+</head>
+<body>
+	<!-- Chargement -->
+	<h1>Chargement en cours...</h1>
+	<div class="scene">
+        <div class="rocket">
+            <img src="img/rocket.png" alt="">
+        </div>
+    </div>
+<script>
+	paceOptions = {
+		ajax: true,
+		document: true,
+		eventLag: false
+	};
+	Pace.on('done', function() {
+        document.location.href="main.html";
+       });
+</script>
+
+
+<!-- Animation étoiles -->
+<script src="js/animation.js"></script>
+</body>
+</html>
