@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Accueil</title>
 </head>
 <body>
@@ -18,6 +18,7 @@
           <a href="#" class="logo"><img src="/img/favicon.png" alt=""></a>
           <i class="menu-toggle-btn fas fa-bars menuBtn"></i>
           <nav class="navigation-menu">
+            <input type="search" name="search" id="search" autocomplete="off" placeholder="Rechercher...">
             <a href="#"><i id="dev" class="fas fa-file-code"></i> Développement</a>
             <a id="tropes" href="#"><i id="tropes" class="fas fa-pen"></i> Tropes</a>
             <a href="#"><i id="livres" class="fas fa-bookmark"></i> Livres</a>
@@ -29,15 +30,25 @@
           </nav>
         </div>
       </header>
-  
-  
       <script type="text/javascript">
         $(".menu-toggle-btn").click(function(){
           $(this).toggleClass("fa-times");
           $(".navigation-menu").toggleClass("active");
         });
       </script>
-    
+
+      <div class="content">
+        <div class="alert">
+          <i class="fas fa-exclamation-triangle"></i>
+          <p>Ce site est le portfolio personnel de Pachalik. Certaines parties sont accessibles au public et d'autres non. Il est expressément demandé de ne pas tenter de forcer la sécurité par mot de passe mise en place</p>
+        </div>
+      </div>
+    <script src="js/script.js"></script>
+    <script>
+      if(isIE()==true){
+      document.location.href="../error-internet-explorer.html";
+  }
+    </script>
     
 </body>
 </html>

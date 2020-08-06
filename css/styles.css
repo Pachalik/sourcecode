@@ -7,12 +7,13 @@
   box-sizing: border-box;
   font-size: 25px;
   font-family: 'Comfortaa', cursive;
+  outline: none;
 }
 ::selection {
   background-color: #FAAC0F;
 }
 body {
-  background-color: #1d1d1d;
+  background-color: #adadad;
 }
 h1 {
   margin-top: 5px;
@@ -34,6 +35,16 @@ body.error .errorcontent {
   transform: translateY(-50%) translateX(-50%);
   position: fixed;
   left: 50%;
+}
+.content {
+  margin: 100px;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 a {
   color: #759B1C;
@@ -61,24 +72,6 @@ a.back:hover i {
 }
 .textcenter {
   text-align: center;
-}
-header img.logo {
-  width: 90px;
-  height: 90px;
-  float: right;
-}
-.cd-dropdown-wrapper {
-  right: -30px;
-  top: 30px;
-  bottom: 30px;
-}
-header h1 {
-  position: fixed;
-  text-align: center;
-  line-height: 100px;
-  right: 50%;
-  font-weight: bold;
-  font-size: 45px;
 }
 p#alert {
   text-align: center;
@@ -160,16 +153,9 @@ p#alert {
   cursor: not-allowed;
 }
 /* Menu */
-*{
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  font-family: "Open Sans",sans-serif;
-  color: white;
-}
 header{
   height: 90px;
-  background: #2f3640;
+  background: #666666;
 }
 .logo{
   float: left;
@@ -177,15 +163,20 @@ header{
   margin-left: 10px;
 }
 .logo img{
-  height: 50px;
+  height: 60px;
+  margin-top: 0;
+  background-color: #8f8f8f;
+  border-radius: 50%;
+  padding: 8px;
+  transition: 0.5s;
 }
-.navigation-menu summary {
-    cursor: pointer;
+.logo img:hover {
+  transform: scale(1.1);
 }
 .is-hidden {
     display: none;
 }
-.navigation-menu summary, .navigation-menu a{
+.navigation-menu a{
   margin-left: 10px;
   color: #ddd;
   text-transform: uppercase;
@@ -194,7 +185,7 @@ header{
   border-radius: 4px;
   transition: .3s linear;
 }
-.navigation-menu a:hover, .navigation-menu summary:hover{
+.navigation-menu a:hover {
   background: #fff;
   color: #2f3640;
   transform: scale(1.1);
@@ -257,7 +248,7 @@ i#wiki {
     top: -10px;
     right: 10px;
   }
-.navigation-menu summary, .navigation-menu a{
+.navigation-menu a{
     display: block;
     margin: 10px 0;
   }
@@ -272,3 +263,59 @@ i#wiki {
 .menuBtn:hover, .fas-times:hover {
     color: #197278;
 }
+input#search {
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  color: black;
+  transition: 0.5s linear;
+  width: 300px;
+}
+input#search:focus {
+  border: 2px solid #759b1c;
+  width: 340px;
+  
+}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-decoration { 
+  cursor: pointer;
+}
+
+/* Alert */
+.alert {
+  color: red;
+  background-color: #c2c2c2;
+  border-left: 5px solid red;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.alert * {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding: 10px;
+}
+.alert i {
+  margin: 10px;
+  margin-top: 0;
+}
+.alert i::after {
+  content: "Attention :";
+  margin-left: 10px;
+  font-family: 'Comfortaa', cursive;
+  font-style: italic;
+}
+@media screen and (max-height: 609px){
+  .navigation-menu a{
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    height: 150px;
+  }
+  .menu-toggle-btn {
+    font-size: 40px;
+  }
+  }

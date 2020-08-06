@@ -35,11 +35,18 @@ function tryLogin(){
 
     if(passwordTested==allPasswords[idNumber]){
         console.log("Mot de passe correct")
-        customAlert('green', 'Mot de passe correct')
+        customAlert('green', 'Mot de passe correct');
         loggedIn = true;
-        console.log('Vous êtes désormais connecté')
+        sessionStorage.setItem("loggedIn", loggedIn);
+        console.log('Vous êtes désormais connecté');
+        document.location.href='testter.html';
     }else {
         console.log('Mot de passe incorrect');
         customAlert('red', 'Mot de passe incorrect');
+    }
+
+    // Permissions
+    if(allIds[idNumber]=='pachalik'){
+        // Permissions Pachalik
     }
 }
