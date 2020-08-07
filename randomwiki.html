@@ -1,13 +1,44 @@
 <!DOCTYPE html>
-<html class="wiki" lang="en">
+<html lang="en" class="no-js">
 <head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <script src="/sourcecode/js/script.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <link rel="shortcut icon" href="/sourcecode/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/sourcecode/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Random Wiki</title>
 </head>
 <body class="wiki" id="particles-js">
+  <header>
+    <div class="inner-width">
+      <a href="#" class="logo"><img src="/sourcecode/img/favicon.png" alt=""></a>
+      <i class="menu-toggle-btn fas fa-bars menuBtn"></i>
+      <nav class="navigation-menu">
+        <input type="search" name="search" id="hy" autocomplete="off" placeholder="Rechercher...">
+        <a href="/sourcecode/dev.html"><i id="dev" class="fas fa-file-code"></i> Développement</a>
+        <a id="tropes" href="/sourcecode/tropes.html"><i id="tropes" class="fas fa-pen"></i> Tropes</a>
+        <a href="/sourcecode/books.html"><i id="livres" class="fas fa-bookmark"></i> Livres</a>
+        <a id="diary" href="/sourcecode/diary.html"><i id="diary" class="fas fa-book"></i> Journal de code</a>
+        <a id="memes" href="/sourcecode/memes.html"><i id="memes" class="fas fa-grin-beam"></i> Memes</a>
+        <a id="wiki" href="/sourcecode/randomwiki.html"><i class="fab fa-wikipedia-w" id="wiki"></i> Wikipédia aléatoire</a>
+        <a href="/sourcecode/external.html"><i id="out" class="fas fa-external-link-alt"></i> Externe</a>
+        <a id="account" href="/sourcecode/account.html"><i id="account" class="fas fa-user-alt"></i> Compte</a>
+      </nav>
+    </div>
+  </header>
+      <script type="text/javascript">
+        $(".menu-toggle-btn").click(function(){
+          $(this).toggleClass("fa-times");
+          $(".navigation-menu").toggleClass("active");
+        });
+      </script>
+        <p id="alert"></p>
+      <div class="content">
+        <body class="wiki" id="particles-js">
     <div id="particles-js" class="wikicontainer">
         <iframe sandbox seamless src="https://fr.wikipedia.org/wiki/Sp%C3%A9cial:Page_au_hasard" height="100%" width="100%"></iframe>
     </div>
@@ -15,7 +46,19 @@
         <i class="fas fa-arrow-left"></i>
     </a>
 
-    <script src="/js/particles.js"></script>
-    <script src="/js/app.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+      </div>
+    
+      <script>
+        if(isIE()==true){
+        document.location.href="/sourcecode/error-internet-explorer.html";
+    }
+      </script>
+      
+  <link href='/sourcecode/imported/search-autocomplete/dist/horsey.css' rel='stylesheet' type='text/css' />
+  <script src='/sourcecode/imported/search-autocomplete/dist/horsey.js'></script>
+  <script src="/sourcecode/js/search.js"></script>
+    
 </body>
 </html>

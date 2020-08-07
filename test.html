@@ -7,46 +7,22 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script>
-  $(function() {
-    var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
-    $( "#tags" ).autocomplete({
-      source: availableTags
-    });
-  });
-  </script>
-</head>
-<body>
-  
-<div class="ui-widget">
-  <label for="tags">Rechercher : </label>
-  <input id="tags">
-</div>
-  
+
+
+
+<!-- Test du changement de l'href -->
+<!-- Pourrait être utilisé pour changer la source d'une image aléatoirement (memes) -->
+<a id="link" href="https://youtube.com" target="_BLANK">Lien</a>
+<button onclick="myFunction()">Je suis un bouton</button>
+<script>
+  function myFunction(){
+    document.getElementById("link").setAttribute('href', "https://maps.google.com")
+  }
+</script>
+
+
+<!-- Test de minnit.chat -->
+<iframe src="https://minnit.chat/testpachalik?embed&nickname=" style="border:none;width:90%;height:500px;" allowTransparency="true"></iframe>
   
 </body>
 </html>

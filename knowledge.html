@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
     <script src="/sourcecode/js/script.js"></script>
@@ -8,10 +8,9 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <link rel="shortcut icon" href="/sourcecode/img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="/sourcecode/css/login.css">
     <link rel="stylesheet" href="/sourcecode/css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Connexion</title>
+    <title>Apprentissage</title>
 </head>
 <body>
   <header>
@@ -31,44 +30,15 @@
       </nav>
     </div>
   </header>
-
-    
-    <script src="js/login.js"></script>
- 
       <script type="text/javascript">
         $(".menu-toggle-btn").click(function(){
           $(this).toggleClass("fa-times");
           $(".navigation-menu").toggleClass("active");
         });
       </script>
-        
-      <div class="content login">
         <p id="alert"></p>
-        <div class="login-content">
-          <form action="index.html">
-                   <div class="input-div one">
-                      <div class="i">
-                          <i class="fas fa-user"></i>
-                      </div>
-                      <div class="div">
-                          <h5>Identifiant</h5>
-                          <input autocomplete="off" type="text" class="input" id="id">
-                      </div>
-                   </div>
-                   <div class="input-div pass">
-                      <div class="i"> 
-                         <i class="fas fa-lock"></i>
-                      </div>
-                      <div class="div">
-                         <h5>Mot de passe</h5>
-                         <input autocomplete="off" type="password" class="input" id="password">
-                     </div>
-                  </div>
-                  <input type="button" class="btn" value="Connexion" onclick="tryLogin()">
-                </form>
-            </div>
-        </div>
-        <script type="text/javascript" src="/sourcecode/js/login-style.js"></script>
+      <div class="content">
+        
       </div>
     
     <script>
