@@ -1,3 +1,13 @@
+function customAlert(bgcolor, text){
+  if(bgcolor=="green"){
+      document.getElementById("alert").style = "background-color: #27ae60";
+  }else if(bgcolor=="red"){
+      document.getElementById("alert").style = "background-color: #c0392b";
+  }
+  document.getElementById("alert").innerHTML = text;
+}
+
+
 // Retourne true si le navigateur est internet explorer et false si ce n'est pas le cas
 function isIE() {
     ua = navigator.userAgent;

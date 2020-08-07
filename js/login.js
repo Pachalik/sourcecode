@@ -1,15 +1,6 @@
-function customAlert(bgcolor, text){
-    if(bgcolor=="green"){
-        document.getElementById("alert").style = "background-color: #27ae60";
-    }else if(bgcolor=="red"){
-        document.getElementById("alert").style = "background-color: #c0392b";
-    }
-    document.getElementById("alert").innerHTML = text;
-}
-
 function tryLogin(){
     // ID
-    var allIds = ['pachalik', 'pioupia'];
+    var allIds = ['pachalik', 'pioupia', "bendchu"];
     var idTested = document.getElementById('id').value;
     var passwordTested = document.getElementById('password').value;
     var recognized = false;
@@ -31,15 +22,16 @@ function tryLogin(){
     }
     
     // Password
-    var allPasswords = ['Le chameau aboie la caravane passe', "Du contrat social"];
+    var allPasswords = ['choucroute', "Du contrat social", "Bendchu54"];
 
     if(passwordTested==allPasswords[idNumber]){
         console.log("Mot de passe correct")
         customAlert('green', 'Mot de passe correct');
         loggedIn = true;
+        var id = allIds[idNumber];
         sessionStorage.setItem("loggedIn", loggedIn);
-        console.log('Vous êtes désormais connecté');
-        document.location.href='testter.html';
+        console.log('Vous êtes désormais connecté en tant que : ' + id);
+        
     }else {
         console.log('Mot de passe incorrect');
         customAlert('red', 'Mot de passe incorrect');
@@ -47,6 +39,10 @@ function tryLogin(){
 
     // Permissions
     if(allIds[idNumber]=='pachalik'){
-        // Permissions Pachalik
+        
+    }else if(allIds[idNumber]=='pioupia'){
+        // Permissions Pioupia
+    }else if (allIds[idNumber]=='bendchu'){
+        document.location.href = "/sourcecode/guitar/methode.html";
     }
 }
